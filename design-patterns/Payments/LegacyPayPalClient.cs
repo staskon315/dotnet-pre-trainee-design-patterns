@@ -1,7 +1,9 @@
 class LegacyPayPalClient
 {
-    public double MakePayment(double amountInUsd)
+    public bool MakePayment(double amountInUsd)
     {
-        throw new Exception();
+        Console.WriteLine($"Processed outdated payment: {amountInUsd}");
+        Thread.Sleep(3000);
+        return true;
     }
 }
