@@ -1,0 +1,1 @@
+# dotnet-pre-trainee-design-patterns
