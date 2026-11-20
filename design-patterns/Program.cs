@@ -43,6 +43,7 @@
             Console.WriteLine("2. PayPal");
             Console.WriteLine("3. Bank Transfer");
             Console.WriteLine("4. Crypto");
+            Console.WriteLine("5. Old Bank");
             Console.Write("Input: ");
             choise = ValidationService.GetValidInputForNumber();
             switch (choise)
@@ -55,6 +56,8 @@
                     return "Bank Transfer";
                 case 4:
                     return "Crypto";
+                case 5:
+                    return "Old Bank";
                 default:
                     Console.WriteLine("there is no such answer option");
                     break;

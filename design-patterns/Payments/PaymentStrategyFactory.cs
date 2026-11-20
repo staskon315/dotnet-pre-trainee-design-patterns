@@ -17,6 +17,9 @@ class PaymentStrategyFactory
             case "Crypto":
                 strategy = new CryptoPaymentStrategy();
                 return true;
+            case "Old Bank":
+                strategy = new OldBankPaymentAdapter();
+                return true;
             default:
                 strategy = null;
                 return false;
