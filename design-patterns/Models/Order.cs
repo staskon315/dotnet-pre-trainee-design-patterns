@@ -1,7 +1,7 @@
 class Order
 {
-    private int Id;
+    public int Id;
     private string CustomerName;
     private decimal TotalAmount;
-    private bool IsCompleted;
+    public bool IsCompleted;
 }
