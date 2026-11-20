@@ -5,10 +5,12 @@
         var checkoutService = new CheckoutService();
         var auditSubscriber = new AuditSubscriber();
         var factory = new PaymentStrategyFactory();
+        var analytics=new Analytics();
         IPaymentStrategy? strategy;
 
         checkoutService.OrderCompleted += auditSubscriber.OnOrderCompleted;
         checkoutService.OrderCompleted += (sender, e) => Console.WriteLine($"Order confirmation sent to {e.CustomerName}.");
+        checkoutService.OrderCompleted+=analytics.OnOrderCompleted;
 
         Console.WriteLine("\nEnter the client's name.");
         Console.Write("Input: ");
