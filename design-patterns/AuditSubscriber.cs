@@ -1,7 +1,7 @@
 class AuditSubscriber
 {
-    public void OnOrderCompleted(Order order)
+    public void OnOrderCompleted(object? sender, Order e)
     {
-        Console.WriteLine($"Order {order.Id} completed and added to audit log.");
+        Console.WriteLine($"Order {e.Id} completed and added to audit log.");
     }
 }

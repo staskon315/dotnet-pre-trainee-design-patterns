@@ -5,13 +5,13 @@ class PaymentStrategyFactory
 
         switch (paymentType)
         {
-            case "BankTransfer":
+            case "Bank Transfer":
                 strategy = new BankTransferPaymentStrategy();
                 return true;
-            case "CardPayment":
+            case "Card":
                 strategy = new CardPaymentStrategy();
                 return true;
-            case "LegacyPayPalClient":
+            case "PayPal":
                 strategy = new PayPalPaymentAdapter();
                 return true;
             default:
