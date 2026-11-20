@@ -1,4 +1,4 @@
-static class Validation
+static class ValidationService
 {
     public static decimal GetValidInputForNumber()
     {

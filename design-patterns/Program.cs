@@ -12,11 +12,11 @@
 
         Console.WriteLine("\nEnter the client's name.");
         Console.Write("Input: ");
-        string name = Validation.GetValidInputForString();
+        string name = ValidationService.GetValidInputForString();
 
         Console.WriteLine("Enter the payment amount");
         Console.Write("Input: ");
-        decimal amount = Validation.GetValidInputForNumber();
+        decimal amount = ValidationService.GetValidInputForNumber();
 
         var order = new Order(name, amount);
 
@@ -42,8 +42,9 @@
             Console.WriteLine("1. Card");
             Console.WriteLine("2. PayPal");
             Console.WriteLine("3. Bank Transfer");
+            Console.WriteLine("4. Crypto");
             Console.Write("Input: ");
-            choise = Validation.GetValidInputForNumber();
+            choise = ValidationService.GetValidInputForNumber();
             switch (choise)
             {
                 case 1:
@@ -52,6 +53,8 @@
                     return "PayPal";
                 case 3:
                     return "Bank Transfer";
+                case 4:
+                    return "Crypto";
                 default:
                     Console.WriteLine("there is no such answer option");
                     break;

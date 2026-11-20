@@ -14,6 +14,9 @@ class PaymentStrategyFactory
             case "PayPal":
                 strategy = new PayPalPaymentAdapter();
                 return true;
+            case "Crypto":
+                strategy = new CryptoPaymentStrategy();
+                return true;
             default:
                 strategy = null;
                 return false;

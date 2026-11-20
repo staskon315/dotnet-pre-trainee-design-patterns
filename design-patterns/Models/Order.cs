@@ -2,7 +2,7 @@ class Order
 {
     private static int count=0;
     public int Id;
-    public string? CustomerName;
+    public string CustomerName;
     public decimal TotalAmount;
     public bool IsCompleted=false;
 
