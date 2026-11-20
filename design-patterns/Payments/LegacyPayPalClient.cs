@@ -1,9 +1,9 @@
 class LegacyPayPalClient
 {
-    public bool MakePayment(double amountInUsd)
+    public async Task<bool> MakePayment(double amountInUsd)
     {
         Console.WriteLine($"Processed outdated payment: {amountInUsd}");
-        Thread.Sleep(3000);
+        await Task.Delay(3000);
         return true;
     }
 }

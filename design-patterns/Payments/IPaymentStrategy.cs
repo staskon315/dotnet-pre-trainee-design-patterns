@@ -1,4 +1,4 @@
 interface IPaymentStrategy
 {
-    public  Task<bool> PayAsync(decimal amount);
+    public  Task<PaymentResult> PayAsync(decimal amount);
 }

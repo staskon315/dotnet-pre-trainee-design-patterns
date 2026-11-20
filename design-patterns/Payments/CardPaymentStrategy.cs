@@ -1,9 +1,10 @@
 class CardPaymentStrategy : IPaymentStrategy
 {
-    public async Task<bool> PayAsync(decimal amount)
+    public async Task<PaymentResult> PayAsync(decimal amount)
     {
         Console.WriteLine($"Processing card payment: {amount}");
         await Task.Delay(3000);
-        return true;
+        var result =new PaymentResult(true,amount);
+        return result;
     }
 }

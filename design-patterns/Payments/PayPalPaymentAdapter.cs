@@ -1,7 +1,11 @@
 class PayPalPaymentAdapter : IPaymentStrategy
 {
-    public Task<bool> PayAsync(decimal amount)
+    public async Task<PaymentResult> PayAsync(decimal amount)
     {
-        throw new NotImplementedException();
+        var legacy= new LegacyPayPalClient();
+        double convertAmount=Convert.ToDouble(amount);
+        var isCompleted= await legacy.MakePayment(convertAmount);
+        var result =new PaymentResult(isCompleted,amount);
+        return result;
     }
 }
